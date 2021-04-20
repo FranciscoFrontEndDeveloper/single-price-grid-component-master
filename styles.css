@@ -4,7 +4,6 @@ body {
   padding: 0;
   font-family: 'Karla', sans-serif;
   font-size: 16px;
-  background: #98a6bd;
 }
 
 .containerMain {
@@ -14,6 +13,7 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   align-items: center;
+  background: #e5eff5;
 }
 
 .subContanerMain {
@@ -22,12 +22,13 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  overflow: hidden;
+  overflow: initial;
 }
 
 .box1, .box2, .box3 {
   align-items: center;
   padding: 20px 15px;
+  row-gap: 20px;
 }
 
 .box1 h1, .box1 h4, .box1 p, .box2 h1, .box2 h4, .box2 p, .box3 h1, .box3 h4, .box3 p {
@@ -39,22 +40,26 @@ body {
   grid-template-rows: repeat(3, auto);
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  background: #e5eff5;
+  background: #ffffff;
 }
 
 .box1 h1 {
   color: #2ab2af;
   font-weight: 700;
+  font-size: 16px;
 }
 
 .box1 h4 {
   color: #c0df34;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .box1 p {
   color: #98a6bd;
   font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .box2 {
@@ -82,12 +87,17 @@ body {
   font-weight: 700;
 }
 
-.box2 h4, .box2 strong, .box2 p, .box2 span {
+.box2 h4, .box2 strong, .box2 p {
   color: #e5eff5;
+}
+
+.box2 p {
+  font-size: 10px;
 }
 
 .box2 span {
   font-size: 12px;
+  color: #c1c9d7;
 }
 
 .box2 input {
@@ -98,6 +108,11 @@ body {
   padding: 10px 0;
   border-radius: 5px;
   font-weight: 700;
+  box-shadow: 0px 10px 13px -15px #000000;
+}
+
+.box2 input:hover {
+  background: #cee660;
 }
 
 .box3 {
@@ -106,6 +121,36 @@ body {
   border-bottom-right-radius: 5px;
   grid-template-rows: auto 1fr;
   background: #4bbebc;
+}
+
+.box3 h4, .box3 p {
+  color: #e5eff5;
+}
+
+.box3 p {
+  font-size: 10px;
+  width: 60%;
+  text-align-last: left;
+  line-height: 17px;
+}
+
+.containerFooter {
+  background: #08090A;
+}
+
+.containerFooter footer p {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+
+.containerFooter footer p a {
+  color: #FF3F00;
+  text-decoration: none;
+}
+
+.containerFooter footer p a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -136,6 +181,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     height: auto;
+    overflow: hidden;
   }
   .subContanerMain .box1 {
     grid-column: 1/3;
